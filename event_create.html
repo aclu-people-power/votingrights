@@ -237,7 +237,9 @@
               
               <div class="ak-err-below">
                   <label>Custom code</label>
-                  {% if event.custom_fields.event_user_form_code %}<p>{{ event.custom_fields.event_user_form_code }}</p>{% endif %}
+                  {% if templateset.custom_fields.event_user_form_code %}
+                            {% include_tmpl templateset.custom_fields.event_user_form_code %}
+                        {% endif %}
                 </div>
             {% endif %}
         </div><!--9-of-12-->
